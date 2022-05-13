@@ -3,7 +3,7 @@ import chalk from "chalk";
 import dotenv from "dotenv";
 dotenv.config();
 
-let db = null;
+let db;
 const mongoClient = new MongoClient(process.env.MONGO_URI);
 
 try{
