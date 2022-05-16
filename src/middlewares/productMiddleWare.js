@@ -11,7 +11,6 @@ export async function validateProduct(req, res, next) {
             price: joi.string().required(),
             brand: joi.string().required(),
             category: joi.string().required(),
-            date: joi.string().required()
         });
 
         const validation = schemaProduct.validate(product);
