@@ -3,8 +3,7 @@ import { validateRegister } from "../middlewares/registerMiddleWare.js";
 import { Router } from "express"
 
 const registerRouter = Router();
-registerRouter.use(validateRegister);
-registerRouter.post("/register", doRegister);
+registerRouter.post("/register", validateRegister, doRegister);
 
 
 export default registerRouter;

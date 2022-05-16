@@ -1,6 +1,8 @@
 
 import chalk from "chalk";
-import db from "./db.js"
+import db from "./db.js";
+import bcrypt from "bcrypt";
+import { v4 as uuid } from "uuid";
 
 export async function doLogin(req, res) {
     const { email, password } = req.body;
@@ -18,9 +20,11 @@ export async function doLogin(req, res) {
 
             delete user.password,
 
-            res.send({ ...user, token }).status(201);
+            res.send({ name: user.name, email, token }).status(201);
+
+            res.locals.user = user;
         } else {
-            console.log(chalk.red(`User with ${email} does not exist in database`));
+            console.log(chalk.red(`User with ${email} does not exist in database: ${email}`));
             return res.sendStatus(409);
         }
     } catch (e) {

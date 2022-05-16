@@ -3,8 +3,6 @@ import { validateLogin } from "../middlewares/loginMiddleWare.js";
 import { Router } from "express"
 
 const loginRouter = Router();
-loginRouter.use(validateLogin);
-loginRouter.post("/login", doLogin);
-
+loginRouter.post("/login", validateLogin,doLogin);
 
 export default loginRouter;
