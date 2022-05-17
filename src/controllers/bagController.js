@@ -11,7 +11,6 @@ export async function putProductInBag(req, res) {
     try {
         const userProduct = await db.collection("products").findOne({ name: product.name });
 
-        console.log(userProduct)
 
         if (user) {
             await db.collection("userBag").insertOne({
@@ -28,7 +27,8 @@ export async function putProductInBag(req, res) {
                 image: userProduct.image,
                 price: userProduct.price,
                 size: product.size,
-                date: dayjs().format('DD/MM/YYYY')
+                date: dayjs().format('DD/MM/YYYY'),
+                bought: "no"
             }).status(201);
         } else {
             res.sendStatus(409);
@@ -39,14 +39,26 @@ export async function putProductInBag(req, res) {
     }
 }
 
+export async function deleteBagProducts(req, res){
+    const products = req.body;
+
+    try{
+        const exist = await db.collection("userBag").find(products);
+        if(!exist) return res.sendStatus(409); 
+
+        db.collection("userBag").deleteMany(products);
+        res.sendStatus(201);
+    }catch (error){
+        res.sendStatus(500);
+        console.log(chalk.red("Algo deu errado no servidor (bag): " + error));
+    }
+}
+
 export async function getBagProducts(req, res) {
     try {
-        const email = req.body.email;
-
-        const allProducts = await db.collection("userBag").find({ email }).toArray();
         const products = await db.collection("userBag").find().toArray()
 
-        if (!allProducts) return res.sendStatus(401);
+        if (!products) return res.sendStatus(401);
 
         res.send(products);
     } catch (error) {
