@@ -5,11 +5,11 @@ export async function profileProduct(req, res) {
     const content = req.body;
     const { date } = req.body;
     const arrayDate = date.split("/");
-    let day = arrayDate[0] + 7;
-    let month = arrayDate[1];
+    let day = parseInt(arrayDate[0]) + 7;
+    let month = parseInt(arrayDate[1]);
     if (parseInt(day) > 31) {
-        day = parseInt(day) - 31;
-        month = parseInt(month) + 1
+        day = day - 31;
+        month++
     }
     const deliveryDate = `${day}/${month}/${arrayDate[2]}`;
 
