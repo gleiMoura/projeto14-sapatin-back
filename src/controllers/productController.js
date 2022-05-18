@@ -67,3 +67,34 @@ export async function getChildishProducts(req, res) {
         res.sendStatus(500);
     }
 }
+
+export async function getAdidasProducts (req, res) {
+    try {
+        const adidas = await db.collection("products").find({ brand: "adidas" }).toArray();
+        res.send(adidas).status(200);
+    } catch (error) {
+        console.log(chalk.red(`Algo errado no servidor para pegar os dados da API: ${error}`));
+        res.sendStatus(500);
+    }
+}
+
+export async function getVansProducts (req, res) {
+    try {
+        const vans = await db.collection("products").find({ brand: "vans" }).toArray();
+        res.send(vans).status(200);
+    } catch (error) {
+        console.log(chalk.red(`Algo errado no servidor para pegar os dados da API: ${error}`));
+        res.sendStatus(500);
+    }
+}
+
+export async function getNikeProducts (req, res) {
+    try {
+        const nike = await db.collection("products").find({ brand: "nike" }).toArray();
+        res.send(nike).status(200);
+    } catch (error) {
+        console.log(chalk.red(`Algo errado no servidor para pegar os dados da API: ${error}`));
+        res.sendStatus(500);
+    }
+}
+
