@@ -1,5 +1,5 @@
 import { doLogin } from "../controllers/loginController.js";
-import { validateLogin } from "../middlewares/loginMiddleWare.js";
+import { validateLogin } from "../middlewares/loginMiddleware.js";
 import { Router } from "express"
 
 const loginRouter = Router();

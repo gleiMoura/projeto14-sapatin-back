@@ -24,7 +24,7 @@ export async function doLogin(req, res) {
 
             res.locals.user = user;
         } else {
-            console.log(chalk.red(`User with ${email} does not exist in database: ${email}`));
+            console.log(chalk.red(`User with ${email} does not exist in database`));
             return res.sendStatus(409);
         }
     } catch (e) {

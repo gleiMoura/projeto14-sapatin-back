@@ -1,5 +1,5 @@
 import { putProductInBag, getBagProducts } from "../controllers/bagController.js";
-import { validateBag } from "../middlewares/bagMiddleWare.js";
+import { validateBag } from "../middlewares/bagMiddleware.js";
 import { deleteBagProducts } from "../controllers/bagController.js";
 import { Router } from "express"
 

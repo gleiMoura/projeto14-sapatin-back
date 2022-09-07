@@ -1,5 +1,5 @@
 import { endShopp } from "../controllers/endController.js";
-import { validateEndShopp } from "../middlewares/endMiddleWare.js";
+import { validateEndShopp } from "../middlewares/endMiddleware.js";
 import { Router } from "express"
 
 const endRouter = Router();
