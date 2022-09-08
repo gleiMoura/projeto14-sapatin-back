@@ -5,14 +5,14 @@ export async function putProductsInDatabase() {
 	const data = [
 		{
 			"name": "Tênis Nike Air (masculino)",
-			"image": "https://images.lojanike.com.br/1024x1024/produto/tenis-nike-air-zoom-superrep-2-masculino-CU6445-001-1.jpg",
+			"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSSUBM3l2AEVbEIN8XGjBTMuNAmO91qUAHV7Q&usqp=CAU",
 			"price": "200.50",
 			"brand": "nike",
 			"category": "masculino"
 		},
 		{
 			"name": "Tênis Nike Pegasus (masculino)",
-			"image": "https://images.lojanike.com.br/1024x1024/produto/tenis-nike-air-zoom-pegasus-38-masculino-CW7356-002-1.jpg",
+			"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTXDeKq1TjE5MQZVqmaORqbpty6mxCcE9LLlw&usqp=CAU",
 			"price": "199.99",
 			"brand": "nike",
 			"category": "masculino"
@@ -47,14 +47,14 @@ export async function putProductsInDatabase() {
 		},
 		{
 			"name": "Tênis Nike Downshfter (feminino)",
-			"image": "https://images.lojanike.com.br/1024x1024/produto/tenis-wmns-nike-downshifter-11-CW3413-500-1.jpg",
+			"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRIIDTOLzLJstAASdP7_pJnn2Am0FR_zPD4yA&usqp=CAU",
 			"price": "190",
 			"brand": "nike",
 			"category": "feminino"
 		},
 		{
 			"name": "Tenis Nike Tanjun",
-			"image": "https://images.lojanike.com.br/1024x1024/produto/tenis-nike-tanjun-DJ6257-001-3-31628872433.jpg",
+			"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQZ4TsQPHIOgaldjdq2zkWCPHl12an9CPfOsAO2VsvpA2O3JJO3SYtK_Haup_l7aB05E8M&usqp=CAU",
 			"price": "190",
 			"brand": "nike",
 			"category": "feminino"
@@ -103,14 +103,14 @@ export async function putProductsInDatabase() {
 		},
 		{
 			"name": "Tenis Nike Funny (infantil)",
-			"image": "https://images.lojanike.com.br/1024x1024/produto/tenis-nike-air-max-excee-infantil-CD6893-001-1.jpg",
+			"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRsxUf0uXKmvjOKmr09OaR18Q38pVJqN4Ddg&usqp=CAU",
 			"price": "700",
 			"brand": "nike",
 			"category": "infantil"
 		},
 		{
 			"name": "Tenis Nike Fantasy (infantil)",
-			"image": "https://images.lojanike.com.br/1024x1024/produto/tenis-nike-flex-runner-infantil-AT4665-001-3-31626441300.jpg",
+			"image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIw81g31pR_afjsJD6W0Wq0ibreBr0WFaYpQ&usqp=CAU",
 			"price": "200",
 			"brand": "nike",
 			"category": "infantil"
